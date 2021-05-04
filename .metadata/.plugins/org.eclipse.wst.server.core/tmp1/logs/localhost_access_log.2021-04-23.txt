@@ -1,0 +1,17 @@
+127.0.0.1 - - [23/Apr/2021:17:59:00 -0300] "GET / HTTP/1.1" 404 763
+0:0:0:0:0:0:0:1 - - [23/Apr/2021:17:59:03 -0300] "GET /projetoweb/ HTTP/1.1" 200 210
+0:0:0:0:0:0:0:1 - - [23/Apr/2021:17:59:15 -0300] "GET /projetoweb/CasdastroEstado HTTP/1.1" 404 694
+0:0:0:0:0:0:0:1 - - [23/Apr/2021:17:59:22 -0300] "GET /projetoweb/CasdastraEstado HTTP/1.1" 404 694
+0:0:0:0:0:0:0:1 - - [23/Apr/2021:17:59:58 -0300] "GET /projetoweb/casdastraEstado HTTP/1.1" 404 694
+0:0:0:0:0:0:0:1 - - [23/Apr/2021:18:00:06 -0300] "GET /projetoweb/casdastroEstado HTTP/1.1" 404 694
+0:0:0:0:0:0:0:1 - - [23/Apr/2021:18:03:13 -0300] "GET /projetoweb/cadastroEstado HTTP/1.1" 404 694
+0:0:0:0:0:0:0:1 - - [23/Apr/2021:18:03:22 -0300] "GET /projetoweb/CadastroEstado HTTP/1.1" 200 537
+0:0:0:0:0:0:0:1 - - [23/Apr/2021:18:03:42 -0300] "POST /projetoweb/addEstado HTTP/1.1" 200 209
+0:0:0:0:0:0:0:1 - - [23/Apr/2021:18:06:46 -0300] "GET /projetoweb/CadastroEstado HTTP/1.1" 200 537
+0:0:0:0:0:0:0:1 - - [23/Apr/2021:18:07:01 -0300] "POST /projetoweb/addEstado HTTP/1.1" 200 223
+0:0:0:0:0:0:0:1 - - [23/Apr/2021:22:39:58 -0300] "GET /projetoweb/CadastroEstado.jsp HTTP/1.1" 200 549
+0:0:0:0:0:0:0:1 - - [23/Apr/2021:22:39:59 -0300] "GET /favicon.ico HTTP/1.1" 404 774
+0:0:0:0:0:0:0:1 - - [23/Apr/2021:22:40:04 -0300] "GET /projetoweb/CadastroEstado HTTP/1.1" 200 537
+0:0:0:0:0:0:0:1 - - [23/Apr/2021:22:40:30 -0300] "POST /projetoweb/addEstado HTTP/1.1" 200 223
+0:0:0:0:0:0:0:1 - - [23/Apr/2021:22:40:56 -0300] "POST /projetoweb/addEstado HTTP/1.1" 200 223
+0:0:0:0:0:0:0:1 - - [23/Apr/2021:22:41:01 -0300] "POST /projetoweb/addEstado HTTP/1.1" 200 223

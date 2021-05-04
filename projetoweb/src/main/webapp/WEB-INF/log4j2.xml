@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration strict="true" status="WARN">
+<!-- status = {TRACE, INFO, DEBUG, WARN, ERROR} -->
+
+	<Properties>
+		<Property name="filename">C:/Users/danny/OneDrive/Área de Trabalho/projeto_Web/log/projetoweb.log</Property>
+	</Properties>
+	
+	<Appenders>
+		<Appender type="Console" name="Console" target="SYSTEM_OUT">
+		<Layout type="PatternLayout">
+		<Pattern>%d{HH:mm:ss.SSS} - %-5level %logger - %msg%n</Pattern>
+		</Layout>
+		</Appender>
+		<Appender type="File" name="FileAppender" fileName="${filename}" append="true" immediateFlush="true">
+		<Layout type="PatternLayout">
+		<Pattern>%d %p %logger -%C- %m%n</Pattern>
+		</Layout>
+		</Appender>
+	</Appenders>
+	
+	<Loggers>
+		<Root level="WARN">
+		<AppenderRef ref="Console" level="WARN" />
+		<AppenderRef ref="FileAppender" level="WARN" />
+		</Root>
+	</Loggers> 
+	
+</Configuration>

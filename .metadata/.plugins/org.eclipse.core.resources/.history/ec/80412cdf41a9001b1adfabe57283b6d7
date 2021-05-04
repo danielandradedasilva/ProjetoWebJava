@@ -1,0 +1,15 @@
+package br.com.stackx.projetoweb.controller;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.servlet.ModelAndView;
+
+@ControllerAdvice
+public class StackXExceptionController {
+
+	public ModelAndView trataException(HttpServletRequest request, Exception exception) throws Exception {
+
+		return null;
+	}
+}

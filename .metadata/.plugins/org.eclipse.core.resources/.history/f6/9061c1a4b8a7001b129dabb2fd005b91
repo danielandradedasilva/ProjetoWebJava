@@ -1,0 +1,5 @@
+package br.com.stackx.projetoweb.config;
+
+public class ProjetoWebConfig {
+
+}
