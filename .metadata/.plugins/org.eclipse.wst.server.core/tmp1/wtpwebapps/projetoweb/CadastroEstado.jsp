@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Cadastro Estado</title>
+<title>Projeto Web</title>
 </head>
 <body>
 	<h1>Cadastro de Estado</h1>

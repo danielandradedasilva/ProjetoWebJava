@@ -1,4 +1,4 @@
 #Tomcat publish data
-#Mon May 03 21:10:22 BRT 2021
+#Sun May 09 23:09:22 BRT 2021
 org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\danny\\.m2\\repository\\org\\springframework\\spring-web\\5.3.6\\spring-web-5.3.6.jar=WEB-INF/lib/spring-web-5.3.6.jar
 org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\danny\\.m2\\repository\\org\\apache\\logging\\log4j\\log4j-web\\2.14.1\\log4j-web-2.14.1.jar=WEB-INF/lib/log4j-web-2.14.1.jar

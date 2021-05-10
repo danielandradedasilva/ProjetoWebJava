@@ -8,13 +8,17 @@
 <html>
 	<head>
 	<meta charset="ISO-8859-1">
-	<title>Cadastro Estado</title>
+	<title>Projeto Web</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
 	<style type="text/css">
-		.error{color: red}
+		.error{color: red;}
+		.divForm{margin-left: 38%;}
+		.form{width: 300px;}
+		.inpMn{width: 80px;}
+		body{background-color: #fff}
 	</style>
 	
-	<script type="text/javascript">
-		
+	<script type="text/javascript">	
 		function excluirEstado() {
 			const removeEstadoForm = document.getElementById("removeEstadoForm");
 		
@@ -25,30 +29,37 @@
 		
 		function irParaLista() {
 			location.href = "http://localhost:8080/projetoweb/ListaEstado";
-		}
-		
+		}	
 	</script>
 	
 	</head>
 	<body>
 		
-		<h1>Cadastro Estado</h1>
-	
-		<form:form method="POST" action="/projetoweb/addEstado">
-			<form:hidden path="idEstado"/>
+		<div class="container mt-5">
 		
-			Nome: <form:input path="nome" required="true" maxlength="80"/> <form:errors path="nome" cssClass="error"/> <br>
-			Sigla: <form:input path="sigla" required="true" maxlength="2"/> <form:errors path="sigla" cssClass="error"/> <br>
-			Código Ibge: <form:input path="codigoIbge" type="number" max="53" min="11" required="true"/> <form:errors path="codigoIbge" cssClass="error"/> <br>
+			<h1 align="center">Cadastro de Estado</h1>
+		
+			<div class="input-group divForm ">
+				<form:form method="POST" action="/projetoweb/addEstado" class="form">
+					<form:hidden path="idEstado"/>
+				
+					Nome<form:input path="nome" required="true" maxlength="80" class="form-control mb-3"/> <form:errors path="nome" cssClass="error"/>
+					Sigla<form:input path="sigla" required="true" maxlength="2" class="form-control mb-3 inpMn"/> <form:errors path="sigla" cssClass="error"/>
+					Código Ibge<form:input path="codigoIbge" type="number" max="53" min="11" required="true" class="form-control mb-3 inpMn"/> <form:errors path="codigoIbge" cssClass="error"/>
+					
+					<div class="d-grid gap-2">
+						<input type="submit" class="btn btn-primary btn-lg"/>
+						<input type="button" class="btn btn-danger btn-lg " value="Excluir" onclick="excluirEstado();"/> 
+						<input type="button" class="btn btn-outline-primary" value="Ir para lista" onclick="irParaLista()">
+					</div>
+					
+				</form:form>
+			</div>
 			
-			<input type="submit"/>
-			<input type="button" value="Excluir" onclick="excluirEstado();"/>
-			<input type="button" value="Ir para lista" onclick="irParaLista()">
-		</form:form>
-		
-		<form id="removeEstadoForm" action="RemoveEstado" method="post">
-			<input type="hidden" name="idEstado" value="${command.idEstado}"/>
-		</form>
+			<form id="removeEstadoForm" action="RemoveEstado" method="post">
+				<input type="hidden" name="idEstado" value="${command.idEstado}"/>
+			</form>
 	
+		</div>
 	</body>
 </html>

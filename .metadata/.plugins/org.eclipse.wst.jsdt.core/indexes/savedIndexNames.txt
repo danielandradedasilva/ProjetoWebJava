@@ -2,7 +2,9 @@ INDEX VERSION 1.4+C:\Users\danny\OneDrive\Área de Trabalho\projeto_Web\.metadata
 615651173.index
 28828600.index
 3398758280.index
+770071933.index
 3166964749.index
 3684584079.index
 664634575.index
+2888967857.index
 965735709.index

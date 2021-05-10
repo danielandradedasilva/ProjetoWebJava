@@ -8,50 +8,63 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Lista de Estados</title>
+<title>Projeto Web</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+<style type="text/css">
+	body{
+		background: #fff;
+	}
+
+</style>
 </head>
 <body>
 
-	<h1 align="center">Lista de Estados</h1>
-
-	<fieldset>
-		<legend>Filtro</legend>
-		<form action="ListaEstado" method="post">
-			Nome: <input type="text" name="nomeEstadoPesquisa" value="${nomeEstadoPesquisaParam}">
+	<div class="container mt-5">
+	
+		<h1 align="center">Lista de Estados</h1>
+	
+		<fieldset>
+			<legend>Filtro</legend>
+			<div class="input-group">
+				<form action="ListaEstado" method="post">
+					<input type="text" placeholder="Digite o nome do Estado" class="form-control mb-3" name="nomeEstadoPesquisa" value="${nomeEstadoPesquisaParam}">					
+					<input type="submit"  class="btn btn-outline-primary" value="Pesquisar Estado">
+				</form>
+			</div>
+		</fieldset>
+	
+		<br>
+	
+		<table  class="table table-striped table-hover">
+			<tr>
+				<td width="33%" align="center">Nome</td>
+				<td width="33%" align="center">Sigla</td>
+				<td width="34%" align="center">C&oacute;digo IBGE</td>
+			</tr>
 			
-			<input type="submit" value="Pesquisar Estado">
+			<c:forEach var="meuEstado" items="${estados}">
+			<tr>
+				<td align="center">
+					<c:url var="minhaUrl" value="/CadastroEstado">				
+						<c:param name="idEstado">${meuEstado.idEstado}</c:param> <!-- url = /projetoweb/CadastroEstado?idEstado=${meuEstado.idEstado} -->			
+					</c:url>			
+					<a href="${minhaUrl}">${meuEstado.nome}</a>					
+				</td>
+				<td align="center">${meuEstado.sigla}</td>
+				<td align="center">${meuEstado.codigoIbge}</td>
+			</tr>
+			
+			</c:forEach>	
+		</table>
+		
+		<br> <br>
+		
+		<form action="CadastroEstado" method="post">
+			<input type="submit" class="btn btn-primary d-grid gap-2 col-6 mx-auto" value="Cadastrar Estado">
 		</form>
-	</fieldset>
-
-	<br> <br>
-
-	<table width="100%" border="1 px">
-		<tr>
-			<td width="33%" align="center">Nome</td>
-			<td width="33%" align="center">Sigla</td>
-			<td width="34%" align="center">C&oacute;digo IBGE</td>
-		</tr>
 		
-		<c:forEach var="meuEstado" items="${estados}">
-		<tr>
-			<td>
-				<c:url var="minhaUrl" value="/CadastroEstado">				
-					<c:param name="idEstado">${meuEstado.idEstado}</c:param> <!-- url = /projetoweb/CadastroEstado?idEstado=${meuEstado.idEstado} -->			
-				</c:url>			
-				<a href="${minhaUrl}">${meuEstado.nome}</a>					
-			</td>
-			<td>${meuEstado.sigla}</td>
-			<td>${meuEstado.codigoIbge}</td>
-		</tr>
-		
-		</c:forEach>	
-	</table>
+	</div>
 	
-	<br> <br>
-	
-	<form action="CadastroEstado" method="post">
-		<input type="submit" value="Cadastrar Novo Estado">
-	</form>
 	
 </body>
 </html>
